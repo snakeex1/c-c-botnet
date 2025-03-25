@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botnet C&C</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Active Bots: {{ total_bots }}</h1>
+    <table>
+        <tr>
+            <th>Bot ID</th>
+            <th>IP</th>
+            <th>OS</th>
+            <th>Load</th>
+            <th>Last Seen</th>
+        </tr>
+        {% for bot_id, bot in bots.items() %}
+        <tr>
+            <td>{{ bot_id }}</td>
+            <td>{{ bot.ip }}</td>
+            <td>{{ bot.os }}</td>
+            <td>{{ bot.load }}</td>
+            <td>{{ bot.last_seen }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+</html>
