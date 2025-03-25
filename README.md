@@ -3,7 +3,7 @@ A c&c botnet that work with a random ip generator and a dashboard,
 
 ## Installation
 ```bash
-pip install flask requests cryptography
+pip install flask request cryptography
 ```
 
 ## Usage
